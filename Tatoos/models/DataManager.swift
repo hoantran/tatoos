@@ -53,10 +53,30 @@ class DataManager {
         
     }
     
-    class func enroll(_ courses: [Course])->Void {
+    class func enroll(_ student: Student, courses: [Course])->Void {
+        for course in courses {
+            student.addToCourses(course)
+        }
+        CoreDataStack.saveContext()
     }
 
-    class func getStudents()->[Student] {
+    class func listStudents()->[Student] {
+        
+        let fetchRequest:NSFetchRequest<Student> = Student.fetchRequest()
+        
+        do {
+            let searchResults = try CoreDataStack.getContext().fetch(fetchRequest)
+            print("student count: \(searchResults.count)")
+
+            for result in searchResults as [Student] {
+                print ("\(result.firstName!) \(result.lastName!) is \(result.age) years old")
+            }
+            
+            return searchResults as [Student]
+        } catch {
+            print ("\(error)")
+            return [Student]()
+        }
     }
 
     
