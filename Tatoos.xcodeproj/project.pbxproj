@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B3275C31DD4FFF800805D45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275C21DD4FFF800805D45 /* AppDelegate.swift */; };
+		3B3275C51DD4FFF800805D45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275C41DD4FFF800805D45 /* ViewController.swift */; };
+		3B3275C81DD4FFF800805D45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3275C61DD4FFF800805D45 /* Main.storyboard */; };
+		3B3275CB1DD4FFF800805D45 /* Tatoos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275C91DD4FFF800805D45 /* Tatoos.xcdatamodeld */; };
+		3B3275CD1DD4FFF800805D45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3275CC1DD4FFF800805D45 /* Assets.xcassets */; };
+		3B3275D01DD4FFF800805D45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3275CE1DD4FFF800805D45 /* LaunchScreen.storyboard */; };
+		3B3275E31DD500CF00805D45 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275E21DD500CF00805D45 /* CoreDataStack.swift */; };
+		3B3275E51DD5012400805D45 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275E41DD5012400805D45 /* DataManager.swift */; };
+		3B3276021DD5061100805D45 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275FE1DD5061100805D45 /* Course+CoreDataClass.swift */; };
+		3B3276031DD5061100805D45 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275FF1DD5061100805D45 /* Course+CoreDataProperties.swift */; };
+		3B3276041DD5061100805D45 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3276001DD5061100805D45 /* Student+CoreDataClass.swift */; };
+		3B3276051DD5061100805D45 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3276011DD5061100805D45 /* Student+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B3275BF1DD4FFF800805D45 /* Tatoos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tatoos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3275C21DD4FFF800805D45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B3275C41DD4FFF800805D45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B3275C71DD4FFF800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B3275CA1DD4FFF800805D45 /* Tatoos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tatoos.xcdatamodel; sourceTree = "<group>"; };
+		3B3275CC1DD4FFF800805D45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B3275CF1DD4FFF800805D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B3275D11DD4FFF800805D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B3275E21DD500CF00805D45 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = models/CoreDataStack.swift; sourceTree = "<group>"; };
+		3B3275E41DD5012400805D45 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = models/DataManager.swift; sourceTree = "<group>"; };
+		3B3275FE1DD5061100805D45 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataClass.swift"; path = "models/Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3B3275FF1DD5061100805D45 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "models/Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3B3276001DD5061100805D45 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataClass.swift"; path = "models/Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3B3276011DD5061100805D45 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataProperties.swift"; path = "models/Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B3275BC1DD4FFF800805D45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B3275B61DD4FFF800805D45 = {
+			isa = PBXGroup;
+			children = (
+				3B3275C11DD4FFF800805D45 /* Tatoos */,
+				3B3275C01DD4FFF800805D45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B3275C01DD4FFF800805D45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B3275BF1DD4FFF800805D45 /* Tatoos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B3275C11DD4FFF800805D45 /* Tatoos */ = {
+			isa = PBXGroup;
+			children = (
+				3B3275C21DD4FFF800805D45 /* AppDelegate.swift */,
+				3B3275C41DD4FFF800805D45 /* ViewController.swift */,
+				3B3275D71DD5000400805D45 /* models */,
+				3B3275D91DD5001800805D45 /* courses */,
+				3B3275D81DD5001200805D45 /* students */,
+				3B3275C61DD4FFF800805D45 /* Main.storyboard */,
+				3B3275CC1DD4FFF800805D45 /* Assets.xcassets */,
+				3B3275CE1DD4FFF800805D45 /* LaunchScreen.storyboard */,
+				3B3275D11DD4FFF800805D45 /* Info.plist */,
+				3B3275C91DD4FFF800805D45 /* Tatoos.xcdatamodeld */,
+			);
+			path = Tatoos;
+			sourceTree = "<group>";
+		};
+		3B3275D71DD5000400805D45 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				3B3275E21DD500CF00805D45 /* CoreDataStack.swift */,
+				3B3275E41DD5012400805D45 /* DataManager.swift */,
+				3B3275FE1DD5061100805D45 /* Course+CoreDataClass.swift */,
+				3B3275FF1DD5061100805D45 /* Course+CoreDataProperties.swift */,
+				3B3276001DD5061100805D45 /* Student+CoreDataClass.swift */,
+				3B3276011DD5061100805D45 /* Student+CoreDataProperties.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		3B3275D81DD5001200805D45 /* students */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = students;
+			sourceTree = "<group>";
+		};
+		3B3275D91DD5001800805D45 /* courses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = courses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B3275BE1DD4FFF800805D45 /* Tatoos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B3275D41DD4FFF800805D45 /* Build configuration list for PBXNativeTarget "Tatoos" */;
+			buildPhases = (
+				3B3275BB1DD4FFF800805D45 /* Sources */,
+				3B3275BC1DD4FFF800805D45 /* Frameworks */,
+				3B3275BD1DD4FFF800805D45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tatoos;
+			productName = Tatoos;
+			productReference = 3B3275BF1DD4FFF800805D45 /* Tatoos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B3275B71DD4FFF800805D45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Pego Consulting";
+				TargetAttributes = {
+					3B3275BE1DD4FFF800805D45 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2473KE85XF;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3B3275BA1DD4FFF800805D45 /* Build configuration list for PBXProject "Tatoos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B3275B61DD4FFF800805D45;
+			productRefGroup = 3B3275C01DD4FFF800805D45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B3275BE1DD4FFF800805D45 /* Tatoos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B3275BD1DD4FFF800805D45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3275D01DD4FFF800805D45 /* LaunchScreen.storyboard in Resources */,
+				3B3275CD1DD4FFF800805D45 /* Assets.xcassets in Resources */,
+				3B3275C81DD4FFF800805D45 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B3275BB1DD4FFF800805D45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3276031DD5061100805D45 /* Course+CoreDataProperties.swift in Sources */,
+				3B3276041DD5061100805D45 /* Student+CoreDataClass.swift in Sources */,
+				3B3276021DD5061100805D45 /* Course+CoreDataClass.swift in Sources */,
+				3B3275CB1DD4FFF800805D45 /* Tatoos.xcdatamodeld in Sources */,
+				3B3275C51DD4FFF800805D45 /* ViewController.swift in Sources */,
+				3B3275C31DD4FFF800805D45 /* AppDelegate.swift in Sources */,
+				3B3276051DD5061100805D45 /* Student+CoreDataProperties.swift in Sources */,
+				3B3275E51DD5012400805D45 /* DataManager.swift in Sources */,
+				3B3275E31DD500CF00805D45 /* CoreDataStack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B3275C61DD4FFF800805D45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B3275C71DD4FFF800805D45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B3275CE1DD4FFF800805D45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B3275CF1DD4FFF800805D45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B3275D21DD4FFF800805D45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B3275D31DD4FFF800805D45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B3275D51DD4FFF800805D45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2473KE85XF;
+				INFOPLIST_FILE = Tatoos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.Tatoos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B3275D61DD4FFF800805D45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2473KE85XF;
+				INFOPLIST_FILE = Tatoos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.Tatoos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B3275BA1DD4FFF800805D45 /* Build configuration list for PBXProject "Tatoos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B3275D21DD4FFF800805D45 /* Debug */,
+				3B3275D31DD4FFF800805D45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B3275D41DD4FFF800805D45 /* Build configuration list for PBXNativeTarget "Tatoos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B3275D51DD4FFF800805D45 /* Debug */,
+				3B3275D61DD4FFF800805D45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3B3275C91DD4FFF800805D45 /* Tatoos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B3275CA1DD4FFF800805D45 /* Tatoos.xcdatamodel */,
+			);
+			currentVersion = 3B3275CA1DD4FFF800805D45 /* Tatoos.xcdatamodel */;
+			path = Tatoos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3B3275B71DD4FFF800805D45 /* Project object */;
+}
