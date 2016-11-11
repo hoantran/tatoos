@@ -19,7 +19,89 @@
 		3B3276031DD5061100805D45 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3275FF1DD5061100805D45 /* Course+CoreDataProperties.swift */; };
 		3B3276041DD5061100805D45 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3276001DD5061100805D45 /* Student+CoreDataClass.swift */; };
 		3B3276051DD5061100805D45 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3276011DD5061100805D45 /* Student+CoreDataProperties.swift */; };
+		3B3276911DD5243300805D45 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3276821DD5240900805D45 /* XCGLogger.framework */; };
+		3B3276921DD5243300805D45 /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3276821DD5240900805D45 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B3276811DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55E3EE4519D76F280068C3A7;
+			remoteInfo = "XCGLogger (iOS)";
+		};
+		3B3276831DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 554DF41719D76FE7005708BE;
+			remoteInfo = "XCGLogger (OS X)";
+		};
+		3B3276851DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70CB94201B99E728007802FF;
+			remoteInfo = "XCGLogger (watchOS)";
+		};
+		3B3276871DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5515A3DF1BA119FA0047BA31;
+			remoteInfo = "XCGLogger (tvOS)";
+		};
+		3B3276891DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55E3EE5019D76F280068C3A7;
+			remoteInfo = XCGLoggerTests_iOS;
+		};
+		3B32768B1DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55BB1F011B79DC7500709779;
+			remoteInfo = XCGLoggerTests_OSX;
+		};
+		3B32768D1DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 558EEB851D6BAC61006A9C7A;
+			remoteInfo = XCGLoggerTests_watchOS;
+		};
+		3B32768F1DD5240900805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 558EEB921D6BAC66006A9C7A;
+			remoteInfo = XCGLoggerTests_tvOS;
+		};
+		3B3276931DD5243300805D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E3EE4419D76F280068C3A7;
+			remoteInfo = "XCGLogger (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B3276951DD5243300805D45 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B3276921DD5243300805D45 /* XCGLogger.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B3275BF1DD4FFF800805D45 /* Tatoos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tatoos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +118,7 @@
 		3B3275FF1DD5061100805D45 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "models/Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3B3276001DD5061100805D45 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataClass.swift"; path = "models/Student+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3B3276011DD5061100805D45 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataProperties.swift"; path = "models/Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XCGLogger.xcodeproj; path = XCGLogger/Sources/XCGLogger.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3276911DD5243300805D45 /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +157,7 @@
 				3B3275D71DD5000400805D45 /* models */,
 				3B3275D91DD5001800805D45 /* courses */,
 				3B3275D81DD5001200805D45 /* students */,
+				3B3276071DD519AF00805D45 /* libraries */,
 				3B3275C61DD4FFF800805D45 /* Main.storyboard */,
 				3B3275CC1DD4FFF800805D45 /* Assets.xcassets */,
 				3B3275CE1DD4FFF800805D45 /* LaunchScreen.storyboard */,
@@ -109,6 +194,29 @@
 			name = courses;
 			sourceTree = "<group>";
 		};
+		3B3276071DD519AF00805D45 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */,
+			);
+			name = libraries;
+			sourceTree = "<group>";
+		};
+		3B3276771DD5240900805D45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B3276821DD5240900805D45 /* XCGLogger.framework */,
+				3B3276841DD5240900805D45 /* XCGLogger.framework */,
+				3B3276861DD5240900805D45 /* XCGLogger.framework */,
+				3B3276881DD5240900805D45 /* XCGLogger.framework */,
+				3B32768A1DD5240900805D45 /* XCGLoggerTests_iOS.xctest */,
+				3B32768C1DD5240900805D45 /* XCGLoggerTests (OS X).xctest */,
+				3B32768E1DD5240900805D45 /* XCGLoggerTests_watchOS.xctest */,
+				3B3276901DD5240900805D45 /* XCGLoggerTests_tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,10 +227,12 @@
 				3B3275BB1DD4FFF800805D45 /* Sources */,
 				3B3275BC1DD4FFF800805D45 /* Frameworks */,
 				3B3275BD1DD4FFF800805D45 /* Resources */,
+				3B3276951DD5243300805D45 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3B3276941DD5243300805D45 /* PBXTargetDependency */,
 			);
 			name = Tatoos;
 			productName = Tatoos;
@@ -157,12 +267,77 @@
 			mainGroup = 3B3275B61DD4FFF800805D45;
 			productRefGroup = 3B3275C01DD4FFF800805D45 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3B3276771DD5240900805D45 /* Products */;
+					ProjectRef = 3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3B3275BE1DD4FFF800805D45 /* Tatoos */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3B3276821DD5240900805D45 /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 3B3276811DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B3276841DD5240900805D45 /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 3B3276831DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B3276861DD5240900805D45 /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 3B3276851DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B3276881DD5240900805D45 /* XCGLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XCGLogger.framework;
+			remoteRef = 3B3276871DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B32768A1DD5240900805D45 /* XCGLoggerTests_iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCGLoggerTests_iOS.xctest;
+			remoteRef = 3B3276891DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B32768C1DD5240900805D45 /* XCGLoggerTests (OS X).xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "XCGLoggerTests (OS X).xctest";
+			remoteRef = 3B32768B1DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B32768E1DD5240900805D45 /* XCGLoggerTests_watchOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCGLoggerTests_watchOS.xctest;
+			remoteRef = 3B32768D1DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B3276901DD5240900805D45 /* XCGLoggerTests_tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XCGLoggerTests_tvOS.xctest;
+			remoteRef = 3B32768F1DD5240900805D45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B3275BD1DD4FFF800805D45 /* Resources */ = {
@@ -195,6 +370,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B3276941DD5243300805D45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XCGLogger (iOS)";
+			targetProxy = 3B3276931DD5243300805D45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B3275C61DD4FFF800805D45 /* Main.storyboard */ = {
@@ -310,10 +493,12 @@
 		3B3275D51DD4FFF800805D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2473KE85XF;
 				INFOPLIST_FILE = Tatoos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DUSE_NSLOG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.Tatoos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -323,6 +508,7 @@
 		3B3275D61DD4FFF800805D45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2473KE85XF;
 				INFOPLIST_FILE = Tatoos/Info.plist;
@@ -352,6 +538,7 @@
 				3B3275D61DD4FFF800805D45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

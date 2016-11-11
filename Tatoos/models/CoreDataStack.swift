@@ -25,7 +25,7 @@ class CoreDataStack {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "Core1")
+        let container = NSPersistentContainer(name: "Tatoos")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -59,5 +59,29 @@ class CoreDataStack {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    class func deleteAllData() {
+        let entities: [String] = ["Student", "Course"]
+        
+        for entity in entities {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            
+            do {
+                try self.getContext().execute(deleteRequest)
+                //5
+            } catch {
+                log.severe("Encountered error \(error) while saving \(entity)")
+            }
+        }
+        do {
+            try self.getContext().save()
+        } catch {
+            log.severe("Encountered error while saving :\(error)")
+        }
+        
+        
+
     }
 }

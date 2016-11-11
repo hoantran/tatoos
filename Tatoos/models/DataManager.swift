@@ -14,9 +14,9 @@ class DataManager {
     
     private init() {}
     
-     // MARK: - Student
+    // MARK: - Student
     
-    class func addStudent(_ firstName: String, _ lastName: String, _ age: Int)->String {
+    class func addStudent(_ firstName: String, _ lastName: String, _ age: Int)->Student {
         let uuid = NSUUID().uuidString
         
         let student:Student = NSEntityDescription.insertNewObject(forEntityName: studentClassName, into: CoreDataStack.getContext()) as! Student
@@ -27,7 +27,7 @@ class DataManager {
 
         CoreDataStack.saveContext()
 
-        return uuid
+        return student
         
         
 //        let course:Course = NSEntityDescription.insertNewObject(forEntityName: courseClassName, into: CoreDataStack.getContext()) as! Course
@@ -53,12 +53,27 @@ class DataManager {
         
     }
     
+    class func removeStudent(_ student: Student) {
+        CoreDataStack.getContext().delete(student)
+    }
+    
+    class func dropAllCourses(_ student: Student) {
+        let courses = student.courses
+        for course in courses! {
+            student.removeFromCourses((course as! Course))
+        }
+//        for course: Course in courses! {
+//            student.removeFromCourses(course)
+//        }
+    }
+    
     class func enroll(_ student: Student, courses: [Course])->Void {
         for course in courses {
             student.addToCourses(course)
         }
         CoreDataStack.saveContext()
     }
+    
 
     class func listStudents()->[Student] {
         
@@ -69,12 +84,12 @@ class DataManager {
             print("student count: \(searchResults.count)")
 
             for result in searchResults as [Student] {
-                print ("\(result.firstName!) \(result.lastName!) is \(result.age) years old")
+                log.debug ("\(result.firstName!) \(result.lastName!) is \(result.age) years old")
             }
             
             return searchResults as [Student]
         } catch {
-            print ("\(error)")
+            log.severe("\(error)")
             return [Student]()
         }
     }
@@ -85,18 +100,18 @@ class DataManager {
     
     // MARK: - Course
     
-    class func addCourse(_ name: String)->Course{
-        let uuid = NSUUID().uuidString
-        let course:Course = NSEntityDescription.insertNewObject(forEntityName: courseClassName, into: CoreDataStack.getContext()) as! Course
-        course.id = uuid
-        CoreDataStack.saveContext()
-        
-        return course
-    }
-    
-    class func getCourses()->[Course] {
-    }
-    
-    class func getEnrollments(_ course)->[Student] {
-    }
+//    class func addCourse(_ name: String)->Course{
+//        let uuid = NSUUID().uuidString
+//        let course:Course = NSEntityDescription.insertNewObject(forEntityName: courseClassName, into: CoreDataStack.getContext()) as! Course
+//        course.id = uuid
+//        CoreDataStack.saveContext()
+//        
+//        return course
+//    }
+//    
+//    class func getCourses()->[Course] {
+//    }
+//    
+//    class func getEnrollments(_ course)->[Student] {
+//    }
 }
