@@ -21,6 +21,11 @@
 		3B3276051DD5061100805D45 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3276011DD5061100805D45 /* Student+CoreDataProperties.swift */; };
 		3B3276911DD5243300805D45 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3276821DD5240900805D45 /* XCGLogger.framework */; };
 		3B3276921DD5243300805D45 /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3276821DD5240900805D45 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B8251881DDA877D002943E1 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251851DDA877D002943E1 /* StudentListViewController.swift */; };
+		3B8251891DDA877D002943E1 /* EnrollCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251861DDA877D002943E1 /* EnrollCourseViewController.swift */; };
+		3B82518A1DDA877D002943E1 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251871DDA877D002943E1 /* StudentCell.swift */; };
+		3B8251951DDA8A07002943E1 /* EnrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251941DDA8A07002943E1 /* EnrollCell.swift */; };
+		3B8251971DDA8C9E002943E1 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251961DDA8C9E002943E1 /* AddStudentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +124,11 @@
 		3B3276001DD5061100805D45 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataClass.swift"; path = "models/Student+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3B3276011DD5061100805D45 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataProperties.swift"; path = "models/Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3B3276761DD5240900805D45 /* XCGLogger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XCGLogger.xcodeproj; path = XCGLogger/Sources/XCGLogger.xcodeproj; sourceTree = SOURCE_ROOT; };
+		3B8251851DDA877D002943E1 /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentListViewController.swift; path = students/StudentListViewController.swift; sourceTree = "<group>"; };
+		3B8251861DDA877D002943E1 /* EnrollCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnrollCourseViewController.swift; path = students/EnrollCourseViewController.swift; sourceTree = "<group>"; };
+		3B8251871DDA877D002943E1 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentCell.swift; path = students/StudentCell.swift; sourceTree = "<group>"; };
+		3B8251941DDA8A07002943E1 /* EnrollCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnrollCell.swift; path = students/EnrollCell.swift; sourceTree = "<group>"; };
+		3B8251961DDA8C9E002943E1 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStudentViewController.swift; path = students/AddStudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +193,11 @@
 		3B3275D81DD5001200805D45 /* students */ = {
 			isa = PBXGroup;
 			children = (
+				3B8251851DDA877D002943E1 /* StudentListViewController.swift */,
+				3B8251871DDA877D002943E1 /* StudentCell.swift */,
+				3B8251861DDA877D002943E1 /* EnrollCourseViewController.swift */,
+				3B8251941DDA8A07002943E1 /* EnrollCell.swift */,
+				3B8251961DDA8C9E002943E1 /* AddStudentViewController.swift */,
 			);
 			name = students;
 			sourceTree = "<group>";
@@ -357,11 +372,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8251881DDA877D002943E1 /* StudentListViewController.swift in Sources */,
 				3B3276031DD5061100805D45 /* Course+CoreDataProperties.swift in Sources */,
+				3B8251951DDA8A07002943E1 /* EnrollCell.swift in Sources */,
 				3B3276041DD5061100805D45 /* Student+CoreDataClass.swift in Sources */,
+				3B82518A1DDA877D002943E1 /* StudentCell.swift in Sources */,
 				3B3276021DD5061100805D45 /* Course+CoreDataClass.swift in Sources */,
 				3B3275CB1DD4FFF800805D45 /* Tatoos.xcdatamodeld in Sources */,
 				3B3275C51DD4FFF800805D45 /* ViewController.swift in Sources */,
+				3B8251971DDA8C9E002943E1 /* AddStudentViewController.swift in Sources */,
+				3B8251891DDA877D002943E1 /* EnrollCourseViewController.swift in Sources */,
 				3B3275C31DD4FFF800805D45 /* AppDelegate.swift in Sources */,
 				3B3276051DD5061100805D45 /* Student+CoreDataProperties.swift in Sources */,
 				3B3275E51DD5012400805D45 /* DataManager.swift in Sources */,

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="y9q-MP-v0n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Student Roster-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="StudentListViewController" customModule="Tatoos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,145 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Xm-mB-XaH">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="studentCell" id="35K-Ub-rhP" customClass="StudentCell" customModule="Tatoos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="35K-Ub-rhP" id="NQm-4b-EYH">
+                                            <frame key="frameInset" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9Xm-mB-XaH" secondAttribute="bottom" id="46g-hn-9r8"/>
+                            <constraint firstItem="9Xm-mB-XaH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PWi-mw-mPj"/>
+                            <constraint firstAttribute="trailing" secondItem="9Xm-mB-XaH" secondAttribute="trailing" id="gNF-6g-ThA"/>
+                            <constraint firstItem="9Xm-mB-XaH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hzd-tI-wfU"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Student Roster" id="xtX-b5-4mB">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="ZOt-1T-RSf"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tJw-Os-tfG">
+                            <connections>
+                                <segue destination="WDN-cf-vTp" kind="show" id="pHG-jR-iG4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backBtn" destination="ZOt-1T-RSf" id="ufX-pJ-msK"/>
+                        <outlet property="studentTable" destination="9Xm-mB-XaH" id="sCP-kj-Thi"/>
+                        <segue destination="d7L-pu-1oL" kind="show" identifier="showEnroll" id="o3C-SQ-Ywb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2015.2" y="138.98050974512745"/>
+        </scene>
+        <!--Add a Student-->
+        <scene sceneID="aKn-mM-jRL">
+            <objects>
+                <viewController id="WDN-cf-vTp" customClass="AddStudentViewController" customModule="Tatoos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oSM-Oe-C15"/>
+                        <viewControllerLayoutGuide type="bottom" id="FD4-8H-fhg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gGl-kR-5wM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Student" id="q2D-7D-SfJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGX-Qx-tbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2945" y="357"/>
+        </scene>
+        <!--Enrollments-->
+        <scene sceneID="gIx-7v-EUU">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="d7L-pu-1oL" customClass="EnrollCourseViewController" customModule="Tatoos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WSJ-Tz-0Kp"/>
+                        <viewControllerLayoutGuide type="bottom" id="nVS-9a-qgh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0um-Hm-uhB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BNa-VJ-XZ1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="enrollCell" id="EJc-xo-mTA" customClass="EnrollCell" customModule="Tatoos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EJc-xo-mTA" id="m0v-lQ-T5A">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="d7L-pu-1oL" id="UUW-zQ-zdl"/>
+                                    <outlet property="delegate" destination="d7L-pu-1oL" id="A6H-S7-mbI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BNa-VJ-XZ1" secondAttribute="trailing" id="F6j-hG-kr1"/>
+                            <constraint firstItem="BNa-VJ-XZ1" firstAttribute="leading" secondItem="0um-Hm-uhB" secondAttribute="leading" id="Iw2-EW-pQX"/>
+                            <constraint firstItem="nVS-9a-qgh" firstAttribute="top" secondItem="BNa-VJ-XZ1" secondAttribute="bottom" id="azB-oE-5oF"/>
+                            <constraint firstItem="BNa-VJ-XZ1" firstAttribute="top" secondItem="WSJ-Tz-0Kp" secondAttribute="bottom" id="mb2-Zt-glg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Enrollments" id="cnr-M0-39G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghw-to-C7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2945" y="-358"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dWF-z9-Yay">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="y9q-MP-v0n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cuD-Pm-emq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1Sc-GI-Rzu" kind="relationship" relationship="viewControllers" id="6l0-Ml-I4p"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wb8-bd-IM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z7H-mM-qPB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Sc-GI-Rzu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="m9R-uN-QHZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1iY-zJ-duN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FzV-Uh-3hS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyv-jC-aU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
