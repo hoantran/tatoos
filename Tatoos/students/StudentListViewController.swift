@@ -16,40 +16,81 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         studentTable.delegate = self
         studentTable.dataSource = self
-//        self.navigationController?.navigationBar.backItem?.title = "Cancel"
-        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        print("--- viewDidAppear ---")
+        self.studentTable.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return DataManager.listStudents().count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath) as! StudentCell
+        let students = DataManager.listStudents()
         
-        cell.textLabel?.text = "Norah Jones"
+        if students.count > indexPath.row {
+            let student = students[indexPath.row]
+            cell.textLabel?.text = "\(student.firstName!) \(student.lastName!)"
+            
+            if DataManager.listCourses().count > 0 {
+                cell.accessoryType = .disclosureIndicator
+            } else {
+                cell.accessoryType = .none
+            }
+        }
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showEnroll", sender: self)
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if DataManager.listCourses().count > 0 {
+            return indexPath
+        } else {
+            return nil
+        }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let students = DataManager.listStudents()
+        if students.count > (indexPath.row) {
+            self.performSegue(withIdentifier: "showEnroll", sender: self)
+        } else {
+            log.error("Can not find the student. Stopped segue")
+        }
+    }
+    
+    
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showEnroll" {
             navigationItem.backBarButtonItem?.title = "Done"
-//            let upcoming = segue.destination as! EnrollCourseViewController
+            let upcoming = segue.destination as! EnrollCourseViewController
             let indexPath = self.studentTable.indexPathForSelectedRow
-//            upcoming.studentID = indexPath?.row
+            
+            let students = DataManager.listStudents()
+            if students.count > (indexPath?.row)! {
+                upcoming.student = students[(indexPath?.row)!]
+            } else {
+                log.error("Can not find the student")
+                upcoming.student = nil
+            }
             self.studentTable.deselectRow(at: indexPath!, animated: true)
         } else {
             navigationItem.backBarButtonItem?.title = "Cancel"
         }
+    }
+    
+    override func willMove(toParentViewController parent: UIViewController?) {
+        super.willMove(toParentViewController: parent)
+        print("parent will move ....")
     }
 }

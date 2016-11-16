@@ -26,6 +26,9 @@
 		3B82518A1DDA877D002943E1 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251871DDA877D002943E1 /* StudentCell.swift */; };
 		3B8251951DDA8A07002943E1 /* EnrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251941DDA8A07002943E1 /* EnrollCell.swift */; };
 		3B8251971DDA8C9E002943E1 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251961DDA8C9E002943E1 /* AddStudentViewController.swift */; };
+		3BEC55D61DDBBB60000F9B09 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC55D51DDBBB60000F9B09 /* AddCourseViewController.swift */; };
+		3BF1938A1DDBAC60000EB817 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF193891DDBAC60000EB817 /* CourseListViewController.swift */; };
+		3BF193931DDBADC8000EB817 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF193921DDBADC8000EB817 /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,9 @@
 		3B8251871DDA877D002943E1 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentCell.swift; path = students/StudentCell.swift; sourceTree = "<group>"; };
 		3B8251941DDA8A07002943E1 /* EnrollCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnrollCell.swift; path = students/EnrollCell.swift; sourceTree = "<group>"; };
 		3B8251961DDA8C9E002943E1 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStudentViewController.swift; path = students/AddStudentViewController.swift; sourceTree = "<group>"; };
+		3BEC55D51DDBBB60000F9B09 /* AddCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddCourseViewController.swift; path = courses/AddCourseViewController.swift; sourceTree = "<group>"; };
+		3BF193891DDBAC60000EB817 /* CourseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseListViewController.swift; path = courses/CourseListViewController.swift; sourceTree = "<group>"; };
+		3BF193921DDBADC8000EB817 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseCell.swift; path = courses/CourseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,9 @@
 		3B3275D91DD5001800805D45 /* courses */ = {
 			isa = PBXGroup;
 			children = (
+				3BF193891DDBAC60000EB817 /* CourseListViewController.swift */,
+				3BF193921DDBADC8000EB817 /* CourseCell.swift */,
+				3BEC55D51DDBBB60000F9B09 /* AddCourseViewController.swift */,
 			);
 			name = courses;
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8251881DDA877D002943E1 /* StudentListViewController.swift in Sources */,
+				3BF193931DDBADC8000EB817 /* CourseCell.swift in Sources */,
 				3B3276031DD5061100805D45 /* Course+CoreDataProperties.swift in Sources */,
 				3B8251951DDA8A07002943E1 /* EnrollCell.swift in Sources */,
 				3B3276041DD5061100805D45 /* Student+CoreDataClass.swift in Sources */,
@@ -381,8 +391,10 @@
 				3B3275CB1DD4FFF800805D45 /* Tatoos.xcdatamodeld in Sources */,
 				3B3275C51DD4FFF800805D45 /* ViewController.swift in Sources */,
 				3B8251971DDA8C9E002943E1 /* AddStudentViewController.swift in Sources */,
+				3BEC55D61DDBBB60000F9B09 /* AddCourseViewController.swift in Sources */,
 				3B8251891DDA877D002943E1 /* EnrollCourseViewController.swift in Sources */,
 				3B3275C31DD4FFF800805D45 /* AppDelegate.swift in Sources */,
+				3BF1938A1DDBAC60000EB817 /* CourseListViewController.swift in Sources */,
 				3B3276051DD5061100805D45 /* Student+CoreDataProperties.swift in Sources */,
 				3B3275E51DD5012400805D45 /* DataManager.swift in Sources */,
 				3B3275E31DD500CF00805D45 /* CoreDataStack.swift in Sources */,
