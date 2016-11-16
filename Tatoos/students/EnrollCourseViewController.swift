@@ -26,6 +26,7 @@ class EnrollCourseViewController: UIViewController, UITableViewDataSource, UITab
                 }
             }
         }
+        navigationItem.title = "\((student?.firstName)!) \((student?.lastName)!)'s Courses"
     }
     
     private func isEnrolled(_ course: Course, _ set: NSSet)->Bool {

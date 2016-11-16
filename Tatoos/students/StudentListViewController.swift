@@ -57,15 +57,23 @@ class StudentListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let students = DataManager.listStudents()
-        if students.count > (indexPath.row) {
+        if DataManager.listCourses().count > 0 {
             self.performSegue(withIdentifier: "showEnroll", sender: self)
         } else {
-            log.error("Can not find the student. Stopped segue")
+            log.error("There aren't any courses.")
         }
     }
     
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            DataManager.removeStudent(DataManager.listStudents()[indexPath.row])
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
     // MARK: - Navigation
     

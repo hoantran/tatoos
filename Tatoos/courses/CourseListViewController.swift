@@ -50,4 +50,40 @@ class CourseListViewController: UIViewController, UITableViewDelegate, UITableVi
 
     // MARK: - Navigation
 
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if (DataManager.listCourses()[indexPath.row].students?.count)! > 0 {
+            return indexPath
+        } else {
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (DataManager.listCourses()[indexPath.row].students?.count)! > 0 {
+            self.performSegue(withIdentifier: "showEntrollment", sender: self)
+        } else {
+            log.error("There aren't any courses.")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            DataManager.removeCourse(DataManager.listCourses()[indexPath.row])
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showEntrollment" {
+            navigationItem.backBarButtonItem?.title = "Done"
+            let upcoming = segue.destination as! EnrollmentViewController
+            let indexPath =  self.courseTable.indexPathForSelectedRow
+            
+            upcoming.course = DataManager.listCourses()[(indexPath?.row)!]
+            self.courseTable.deselectRow(at: indexPath!, animated: true)
+        } else {
+            navigationItem.backBarButtonItem?.title = "Cancel"
+        }
+    }
 }

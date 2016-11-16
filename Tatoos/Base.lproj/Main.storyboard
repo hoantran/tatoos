@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="35K-Ub-rhP" id="NQm-4b-EYH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -46,7 +46,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Student Roster" id="xtX-b5-4mB">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="ZOt-1T-RSf"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="tJw-Os-tfG">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="tJw-Os-tfG">
                             <connections>
                                 <segue destination="WDN-cf-vTp" kind="show" id="pHG-jR-iG4"/>
                             </connections>
@@ -82,7 +82,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OaO-Ap-Fse" id="9ek-2x-E8L">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -107,11 +107,56 @@
                     </navigationItem>
                     <connections>
                         <outlet property="courseTable" destination="6KS-ry-HCn" id="ZqT-bT-n1H"/>
+                        <segue destination="tuE-dn-No0" kind="show" identifier="showEntrollment" id="f2W-fe-QNA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gs6-NM-j97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015.2" y="1037.6311844077961"/>
+        </scene>
+        <!--Course Enrollment-->
+        <scene sceneID="ud5-QA-D58">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tuE-dn-No0" customClass="EnrollmentViewController" customModule="Tatoos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C5h-1o-Zxw"/>
+                        <viewControllerLayoutGuide type="bottom" id="D2G-73-yyo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fp-fg-hky">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBG-1x-VY1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="enrollmentCell" id="mgR-wD-MB1">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mgR-wD-MB1" id="5FD-tf-qrL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iBG-1x-VY1" firstAttribute="leading" secondItem="8fp-fg-hky" secondAttribute="leading" id="85p-ib-Z3X"/>
+                            <constraint firstAttribute="trailing" secondItem="iBG-1x-VY1" secondAttribute="trailing" id="KFy-xz-xlY"/>
+                            <constraint firstItem="D2G-73-yyo" firstAttribute="top" secondItem="iBG-1x-VY1" secondAttribute="bottom" id="QDQ-8d-8Mr"/>
+                            <constraint firstItem="iBG-1x-VY1" firstAttribute="top" secondItem="C5h-1o-Zxw" secondAttribute="bottom" id="bZa-9o-Qch"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Course Enrollment" id="LG3-MJ-QnP"/>
+                    <connections>
+                        <outlet property="enrollmentTable" destination="iBG-1x-VY1" id="H27-Qe-9GU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hE9-gy-668" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2945" y="1031"/>
         </scene>
         <!--Add a Student-->
         <scene sceneID="aKn-mM-jRL">
@@ -221,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bhm-Ia-F37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919" y="1033"/>
+            <point key="canvasLocation" x="2945" y="1759"/>
         </scene>
         <!--Enrollments-->
         <scene sceneID="gIx-7v-EUU">
@@ -243,7 +288,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EJc-xo-mTA" id="m0v-lQ-T5A">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

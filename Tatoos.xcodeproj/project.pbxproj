@@ -26,6 +26,7 @@
 		3B82518A1DDA877D002943E1 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251871DDA877D002943E1 /* StudentCell.swift */; };
 		3B8251951DDA8A07002943E1 /* EnrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251941DDA8A07002943E1 /* EnrollCell.swift */; };
 		3B8251971DDA8C9E002943E1 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8251961DDA8C9E002943E1 /* AddStudentViewController.swift */; };
+		3B9961EB1DDC120000D42F26 /* EnrollmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9961EA1DDC120000D42F26 /* EnrollmentViewController.swift */; };
 		3BEC55D61DDBBB60000F9B09 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC55D51DDBBB60000F9B09 /* AddCourseViewController.swift */; };
 		3BF1938A1DDBAC60000EB817 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF193891DDBAC60000EB817 /* CourseListViewController.swift */; };
 		3BF193931DDBADC8000EB817 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF193921DDBADC8000EB817 /* CourseCell.swift */; };
@@ -132,6 +133,7 @@
 		3B8251871DDA877D002943E1 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentCell.swift; path = students/StudentCell.swift; sourceTree = "<group>"; };
 		3B8251941DDA8A07002943E1 /* EnrollCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnrollCell.swift; path = students/EnrollCell.swift; sourceTree = "<group>"; };
 		3B8251961DDA8C9E002943E1 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddStudentViewController.swift; path = students/AddStudentViewController.swift; sourceTree = "<group>"; };
+		3B9961EA1DDC120000D42F26 /* EnrollmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnrollmentViewController.swift; path = courses/EnrollmentViewController.swift; sourceTree = "<group>"; };
 		3BEC55D51DDBBB60000F9B09 /* AddCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddCourseViewController.swift; path = courses/AddCourseViewController.swift; sourceTree = "<group>"; };
 		3BF193891DDBAC60000EB817 /* CourseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseListViewController.swift; path = courses/CourseListViewController.swift; sourceTree = "<group>"; };
 		3BF193921DDBADC8000EB817 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseCell.swift; path = courses/CourseCell.swift; sourceTree = "<group>"; };
@@ -171,8 +173,8 @@
 				3B3275C21DD4FFF800805D45 /* AppDelegate.swift */,
 				3B3275C41DD4FFF800805D45 /* ViewController.swift */,
 				3B3275D71DD5000400805D45 /* models */,
-				3B3275D91DD5001800805D45 /* courses */,
 				3B3275D81DD5001200805D45 /* students */,
+				3B3275D91DD5001800805D45 /* courses */,
 				3B3276071DD519AF00805D45 /* libraries */,
 				3B3275C61DD4FFF800805D45 /* Main.storyboard */,
 				3B3275CC1DD4FFF800805D45 /* Assets.xcassets */,
@@ -214,6 +216,7 @@
 				3BF193891DDBAC60000EB817 /* CourseListViewController.swift */,
 				3BF193921DDBADC8000EB817 /* CourseCell.swift */,
 				3BEC55D51DDBBB60000F9B09 /* AddCourseViewController.swift */,
+				3B9961EA1DDC120000D42F26 /* EnrollmentViewController.swift */,
 			);
 			name = courses;
 			sourceTree = "<group>";
@@ -270,7 +273,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Pego Consulting";
 				TargetAttributes = {
 					3B3275BE1DD4FFF800805D45 = {
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9961EB1DDC120000D42F26 /* EnrollmentViewController.swift in Sources */,
 				3B8251881DDA877D002943E1 /* StudentListViewController.swift in Sources */,
 				3BF193931DDBADC8000EB817 /* CourseCell.swift in Sources */,
 				3B3276031DD5061100805D45 /* Course+CoreDataProperties.swift in Sources */,
@@ -449,6 +453,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -498,6 +503,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
